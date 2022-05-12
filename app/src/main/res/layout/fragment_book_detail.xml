@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/publisher_date_details_page"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Verlag:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_book_details_publisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_date_details_page" />
+
+        <TextView
+            android:id="@+id/isbn_details_page"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="ISBN:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_book_details_publisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publisher_date_details_page" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_publisher"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/publisher_date_details_page"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_bookYearsOfPublication" />
+
+        <TextView
+            android:id="@+id/numberOfPages_details_page"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Seitenanzahl:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_book_details_publisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isbn_details_page" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_numberOfPages"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toEndOf="@+id/numberOfPages_details_page"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_isbn" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_isbn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toEndOf="@+id/numberOfPages_details_page"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_publisher" />
+
+        <ImageView
+            android:id="@+id/fragment_book_details_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_book_details_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_to_read_books" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_bookYearsOfPublication"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/release_date_details_page"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_authorName" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_authorSalutationType"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="121dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_title" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_authorName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="96dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_authorSalutationType" />
+
+        <TextView
+            android:id="@+id/fragment_book_details_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfPages_details_page" />
+
+        <TextView
+            android:id="@+id/fragment_book_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_genre" />
+
+        <TextView
+            android:id="@+id/release_date_details_page"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Veröffentlicht am:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_book_details_bookYearsOfPublication"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_authorName" />
+
+        <ImageButton
+            android:id="@+id/add_to_read_books"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            app:layout_constraintEnd_toStartOf="@+id/add_to_wishlist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_image"
+            app:srcCompat="@drawable/ic_baseline_book_24" />
+
+        <ImageButton
+            android:id="@+id/add_to_wishlist"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            app:layout_constraintEnd_toStartOf="@+id/add_to_favorite_books"
+            app:layout_constraintStart_toEndOf="@+id/add_to_read_books"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_image"
+            app:srcCompat="@drawable/ic_baseline_wishlist_add_24" />
+
+        <ImageButton
+            android:id="@+id/add_to_favorite_books"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_to_wishlist"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_details_image"
+            app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+        <Button
+            android:id="@+id/button_edit_book"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="70dp"
+            android:clickable="true"
+            android:text="bearbeiten"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_description"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_delete_book"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="70dp"
+            android:clickable="true"
+            android:text="löschen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_book_description"
+            app:layout_constraintVertical_bias="0.0" />
+
+<!--        <FrameLayout
+            android:id="@+id/frameLayout_delete_book"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="70dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_delete_book">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Möchtest du das Buch wirklich löschen?"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/confirm_delete"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="40dp"
+                    android:backgroundTint="@color/greyWhite"
+                    android:text="ja"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    app:strokeColor="@color/orange"
+                    app:strokeWidth="2dp" />
+
+                <Button
+                    android:id="@+id/abort_delete"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="180dp"
+                    android:backgroundTint="@color/greyWhite"
+                    android:text="nein"
+                    android:textColor="@color/orange"
+                    app:strokeColor="@color/orange"
+                    app:strokeWidth="2dp" />
+        </FrameLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

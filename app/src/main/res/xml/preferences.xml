@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="User Interface" />
+
+    <SwitchPreferenceCompat
+        app:icon="@drawable/ic_baseline_dark_mode_24"
+        app:key="light_mode"
+        app:title="Enable Dark Mode" />
+
+    <PreferenceCategory app:title="Miscellaneous" />
+
+    <Preference
+        app:icon="@drawable/ic_baseline_feedback_24"
+        app:key="feedback"
+        app:summary="Report technical issues or suggest new features"
+        app:title="Send feedback" />
+
+</PreferenceScreen>

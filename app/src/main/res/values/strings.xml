@@ -1,0 +1,90 @@
+<resources>
+    <!--Appname-->
+    <string name="app_name">Bibliofy</string>
+
+    <!--Intro-->
+    <string name="titleIntro">Lesen und fügen Sie</string>
+    <string name="btnText">Next</string>
+    <string name="mainIntroImageDescription">book lover</string>
+    <string name="imageBookReadingDescription">Book Reading</string>
+    <string name="contentsIntro">alle Ihre Lieblingsbücher und
+            -romane zu Ihrer Bibliothek hinzu
+            und wählen Sie zwischen
+            verschiedenen Buchabschnitten</string>
+    <string name="get_start">Get Started</string>
+    <string name="enter_your_name">Enter your name</string>
+
+    <!--Fragment-->
+    <string name="my_library">Meine Bibliothek</string>
+    <string name="all_books">Alle</string>
+    <string name="read_books">Gelesen</string>
+    <string name="wished_books">Gewünscht</string>
+    <string name="favorite_books">Favoriten</string>
+    <string name="book_title">Buchtitel</string>
+    <string name="book_author">Autor</string>
+    <string name="author_details">Autordetails</string>
+    <string name="book_details">Buchdetails</string>
+    <string name="book_yearsOfPublication">Erscheinungsjahr</string>
+    <string name="book_publisher">Verlag</string>
+    <string name="book_number_of_pages">Seitenanzahl</string>
+    <string name="book_isbn">ISBN</string>
+    <string name="home_fragment">Home</string>
+    <string name="add_fragment">Buch Hinzufügen</string>
+    <string name="search_fragment">Search</string>
+    <string name="library_fragment">Library</string>
+    <string name="btn_search">Los</string>
+    <string name="author_search">Autor</string>
+    <string name="pages_search">Anzahl Seiten</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_descr_book_picture">Book Picture</string>
+    <string name="text_empty">#No Book#</string>
+
+    <string name="text_lastname">Nachname</string>
+    <string name="text_firstname">Vorname</string>
+    <string name="book_description">Buchbeschreibung</string>
+    <string name="btn_save">speichern</string>
+    <string name="Genre_input_label_Type_drama">Drama</string>
+    <string name="Genre_input_label_Type_fable">Märchen</string>
+    <string name="Genre_input_label_Type_fantasy">Fantasie</string>
+    <string name="Genre_input_label_Type_fiction">Fiktion</string>
+    <string name="Genre_input_label_Type_horror">Horror</string>
+    <string name="Genre_input_label_Type_humor">Humor</string>
+    <string name="author_input_Type_group_Mr">Herr</string>
+    <string name="author_input_Type_group_Mrs">Frau</string>
+    <string name="book_input_label_Type_hasRead">gelesen</string>
+    <string name="book_input_Type_group_wish">gewünscht</string>
+    <string name="book_input_Type_group_favourite">favorit</string>
+    <string name="preview_image">Preview Image</string>
+    <string name="author_input_Type_group_not_speciled">-</string>
+    <string name="imageFromPhone">ImageFromPhone</string>
+    <string name="genre_details">Buchgenre</string>
+    <string name="bookshelf_details">Buchregal</string>
+    <string-array name="bookshelves">
+        <item>Regal A</item>
+        <item>Regal B</item>
+        <item>Regal C</item>
+        <item>Regal D</item>
+        <item>Regal E</item>
+        <item>Regal F</item>
+    </string-array>
+
+
+    <!--library-->
+    <string name="shelf_a">Regal A</string>
+    <string name="shelf_b">Regal B</string>
+    <string name="shelf_c">Regal C</string>
+    <string name="shelf_d">Regal D</string>
+    <string name="shelf_e">Regal E</string>
+    <string name="shelf_f">Regal F</string>
+
+
+    <!--menu-->
+    <string name="action_settings">Settings</string>
+    <string name="bibliofy_app">Bibliofy</string>
+    <string name="action_menu_title_delete">Delete Books</string>
+    <string name="btn_update">Aktualisieren</string>
+
+
+</resources>

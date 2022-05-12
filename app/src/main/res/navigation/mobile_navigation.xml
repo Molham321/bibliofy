@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/ic_home">
+
+    <fragment
+        android:id="@+id/ic_home"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.home.HomeFragment"
+        android:label="@string/home_fragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_ic_home_to_navigation_book_detail"
+            app:destination="@id/navigation_book_detail"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ic_add"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.add.AddFragment"
+        android:label="@string/add_fragment"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_ic_add_to_ic_home"
+            app:destination="@id/ic_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ic_library"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.library.LibraryFragment"
+        android:label="@string/library_fragment"
+        tools:layout="@layout/fragment_library" >
+        <argument
+            android:name="bookId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_ic_library_to_navigation_book_detail"
+            app:destination="@id/navigation_book_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_book_detail"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.bookdetails.BookDetailFragment"
+        android:label="BookDetailFragment"
+        tools:layout="@layout/fragment_book_detail">
+        <argument
+            android:name="bookId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_navigation_book_detail_to_ic_home"
+            app:destination="@id/ic_home"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_navigation_book_detail_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ic_settings"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.settings.SettingsFragment"
+        android:label="Einstellungen"
+        tools:layout="@layout/fragment_settings"/>
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="de.fh_erfurt.bibliofy.view.fragments.update.UpdateFragment"
+        android:label="Update" >
+        <argument
+            android:name="bookId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_updateFragment_to_navigation_book_detail"
+            app:destination="@id/navigation_book_detail"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+</navigation>

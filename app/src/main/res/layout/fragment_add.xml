@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="75dp"
+        tools:context=".view.fragments.add.AddFragment">
+
+        <TextView
+            android:id="@+id/textViewAuthorDetails"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fontFamily="@font/cairo_regular_400"
+            android:gravity="center"
+            android:text="@string/author_details"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/author_input_Type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAuthorDetails"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/author_input_Type_group_Mr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:text="@string/author_input_Type_group_Mr" />
+
+            <RadioButton
+                android:id="@+id/author_input_Type_group_Mrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:text="@string/author_input_Type_group_Mrs" />
+
+            <RadioButton
+                android:id="@+id/author_input_Type_group_NOT_SPECIFIED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:text="@string/author_input_Type_group_not_speciled" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/author_FirstnameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/text_firstname"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperText="*"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author_input_Type_group"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingBottom="10dp"
+                android:inputType="textPersonName"
+                android:maxLength="16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/author_LastnameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/text_lastname"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperText="*"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/author_FirstnameLayout"
+            app:layout_constraintTop_toBottomOf="@+id/author_input_Type_group"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:maxLength="16"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewBookDetails"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/cairo_regular_400"
+            android:gravity="center"
+            android:text="@string/book_details"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author_FirstnameLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_TitleLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/book_title"
+            app:counterEnabled="true"
+            app:counterMaxLength="25"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperText="*"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnAddImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBookDetails"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_bookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:maxLength="26"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_PublisherLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/book_publisher"
+            app:counterEnabled="true"
+            app:counterMaxLength="25"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperText="*"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnAddImage"
+            app:layout_constraintTop_toBottomOf="@+id/book_TitleLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_book_publisher"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:maxLength="26"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/et_book_yearsOfPublication"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="185dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="@string/book_yearsOfPublication"
+            android:textColorHint="@color/darker_gray"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/book_number_of_pagesLayout"
+            app:layout_constraintTop_toBottomOf="@+id/book_PublisherLayout"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_number_of_pagesLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/book_number_of_pages"
+            app:counterEnabled="true"
+            app:counterMaxLength="5"
+            app:endIconMode="clear_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_PublisherLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_book_number_of_pages"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/btnAddImage"
+            android:layout_width="84sp"
+            android:layout_height="156sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/preview_image"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBookDetails"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_isbnLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/book_isbn"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperText="*"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_number_of_pagesLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_book_isbn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="number"
+                android:maxLength="51"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_descriptionLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="397dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/book_description"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_isbnLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_book_description"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                android:maxLength="101"
+                android:paddingBottom="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/book_input_Type_CheckBox_hasRead"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/book_input_label_Type_hasRead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_descriptionLayout"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/book_input_Type_CheckBox_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/book_input_Type_group_wish"
+            app:layout_constraintStart_toEndOf="@+id/book_input_Type_CheckBox_hasRead"
+            app:layout_constraintTop_toBottomOf="@+id/book_descriptionLayout"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/book_input_Type_CheckBox_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/book_input_Type_group_favourite"
+            app:layout_constraintStart_toEndOf="@+id/book_input_Type_CheckBox_wish"
+            app:layout_constraintTop_toBottomOf="@+id/book_descriptionLayout"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewGenreDetails"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cairo_regular_400"
+            android:gravity="center"
+            android:text="@string/genre_details"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_input_Type_CheckBox_wish"
+            tools:ignore="MissingConstraints" />
+
+        <RadioGroup
+            android:id="@+id/genre_input_Type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="clip_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGenreDetails"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_humor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_humor" />
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_horror"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_horror" />
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_fiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_fiction" />
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_fable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_fable" />
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_fantasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_fantasy" />
+
+            <RadioButton
+                android:id="@+id/genre_input_Type_RadioButton_drama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:gravity="center"
+                android:text="@string/Genre_input_label_Type_drama" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewBookshelfDetails"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cairo_regular_400"
+            android:gravity="center"
+            android:text="@string/bookshelf_details"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genre_input_Type_group"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/bookshelfSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBookshelfDetails"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btnAddBookSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookshelfSpinner"
+            tools:ignore="MissingConstraints,NotSibling,TextContrastCheck" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
