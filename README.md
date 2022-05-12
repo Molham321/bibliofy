@@ -1,7 +1,5 @@
 #### Bibliofy - ein Android-App Projekt von Martin Jugenheimer, Anna-Lisa Merkel, Molham Al-khodari und Mohammad Assaf
 
-Link zum Repository: [Bibliofy](https://git.ai.fh-erfurt.de/bibliofy/bibliofy)
-
 ## Was ist Bibliofy?
 
 Bibliofy ist eine App zur Verwaltung von Büchern, die im Rahmen des Kurses "Programmierung mobiler Endgeräte" im Wintersemester 21/22 an der Fachhochschule Erfurt entstand. Nutzer können mit der App einen Überblick über alle Bücher in ihrem Besitz behalten, sie kategorisieren und filtern.
